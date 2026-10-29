@@ -1,20 +1,24 @@
-using System.Security.Cryptography;
 
 string dockingCode = "alt annet";
-string instruction = "";
 
-// TODO: Bruk switch statement til å sette instruction.
-// En moderne switch. isteden for case/break switch.
-instruction = dockingCode switch
+switch (dockingCode)
 {
-    "NORTH" => "Dock at gate 1",
-    "EAST" => "Dock at gate 2",
-    "SERVICE" => "Dock at maintenance bay",
-    "CLOSED" => "Hold position",
-    _ => "Unknown docking code"    
-};
-
-Console.WriteLine(instruction);
+    case "NORTH":
+        Console.WriteLine("Dock at gate 1");
+        break;
+    case "EAST":
+        Console.WriteLine("Dock at gate 2");
+        break;
+    case "SERVICE":
+        Console.WriteLine("Dock at maintenance bay");
+        break;
+    case "CLOSED":
+        Console.WriteLine("Hold position");
+        break;
+    default:
+        Console.WriteLine("Unknown docking code");
+        break;
+}
 
 
 // Ferdig

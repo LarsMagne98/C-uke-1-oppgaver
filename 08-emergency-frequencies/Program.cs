@@ -1,15 +1,23 @@
 string signal = "RED";
 
-// TODO: Lag switch med kombinerte case-labels.
 
-string message = signal switch
+switch (signal)
 {
-    "RED" or "CRIMSON" or "SCARLET" => "Evacuate deck",
-    "AMBER" or "YELLOW"             => "Prepare crew",
-    "GREEN"                         => "No emergency",
-    _                               => "Unknown signal"
-};
-
-Console.WriteLine(message);
+    case "RED":
+    case "CRIMSON":
+    case "SCARLET":
+        Console.WriteLine("Evacuate deck");
+        break;
+    case "AMBER":
+    case "YELLOW":
+        Console.WriteLine("Prepare crew");
+        break;
+    case "GREEN":
+        Console.WriteLine("No emergency");
+        break;
+    default:
+        Console.WriteLine("Unknown signal");
+        break;
+}
 
 // Ferdig
